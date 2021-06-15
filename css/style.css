@@ -379,7 +379,6 @@ header .navbar ul li a:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  margin: auto;
   opacity: .8;
 }
 

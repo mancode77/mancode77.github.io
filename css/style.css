@@ -30,7 +30,7 @@ html::-webkit-scrollbar {
   width: 0;
 }
 
-#scrollPath{
+#scrollPath {
   position: fixed;
   top: 0;
   right: 0;
@@ -39,25 +39,28 @@ html::-webkit-scrollbar {
   background: rgba(255, 255, 255, 0.05);
 }
 
-#progerssbar{
+#progerssbar {
   position: fixed;
   top: 0;
   right: 0;
   width: 10px;
   background: linear-gradient(to top, #008aff, #00ffe7);
   animation: animate 5s linear infinite;
+  overflow: hidden;
 }
 
-@keyframes animate{
-  0%,100%{
+@keyframes animate {
+  0%,
+  100% {
     filter: hue-rotate(0deg);
-  }50%{
+  }
+  50% {
     filter: hue-rotate(360deg);
   }
 }
 
-#progerssbar::before{
-  content: '';
+#progerssbar::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -67,8 +70,8 @@ html::-webkit-scrollbar {
   filter: blur(10px);
 }
 
-#progerssbar::after{
-  content: '';
+#progerssbar::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -144,6 +147,19 @@ header {
   text-align: center;
 }
 
+@keyframes bg {
+  0%{
+    transform: scale(0) translateY(0) rotate(0deg);
+  }10%{
+    opacity: .8;
+  }90%{
+    opacity: .8;
+  }100%{
+    transform: scale(1) translateY(-500%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 header .user img {
   height: 17rem;
   width: 17rem;
@@ -183,8 +199,8 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a .fa,
-header .navbar ul li a .fas{
- margin-right: 8px;
+header .navbar ul li a .fas {
+  margin-right: 8px;
 }
 
 header .navbar ul li a:hover {
@@ -228,8 +244,8 @@ header .navbar ul li a:hover {
   position: relative;
 }
 
-.home h1 span::after{
-  content: '';
+.home h1 span::after {
+  content: "";
   position: absolute;
   left: 0;
   height: 100%;
@@ -239,8 +255,8 @@ header .navbar ul li a:hover {
   animation: typing 3s steps(20) alternate infinite;
 }
 
-@keyframes typing{
-  100%{
+@keyframes typing {
+  100% {
     left: 100%;
     margin: 0 -35px 0 35px;
   }
@@ -354,7 +370,7 @@ header .navbar ul li a:hover {
   background: var(--yellow);
 }
 
-.education .box-container .box a{
+.education .box-container .box a {
   color: var(--yellow);
 }
 
@@ -379,7 +395,7 @@ header .navbar ul li a:hover {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .portfolio .box-container .box:hover img {
@@ -443,7 +459,7 @@ header .navbar ul li a:hover {
 }
 
 .contact .row .content .info h3 a {
- color: #e8dfec;
+  color: #e8dfec;
 }
 
 .contact .row .content .info h3 i {
@@ -501,9 +517,8 @@ header .navbar ul li a:hover {
 }
 
 @media (max-width: 400px) {
-
-  .home h1 span::after{
-    content: '';
+  .home h1 span::after {
+    content: "";
     position: absolute;
     left: 0;
     height: 100%;
@@ -517,7 +532,7 @@ header .navbar ul li a:hover {
     font-size: 4rem;
   }
 
- .home h1 span{
+  .home h1 span {
     display: block;
     width: 80%;
     font-size: 4rem;

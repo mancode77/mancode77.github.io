@@ -359,6 +359,10 @@ body.dark-theme {
   bottom: 0;
 }
 
+.main {
+  margin-bottom: 3.5rem;
+}
+
 /*=============== SKILLS ===============*/
 .skills__content {
   row-gap: 3.5rem;

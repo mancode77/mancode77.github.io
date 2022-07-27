@@ -1,278 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/portfolio.png" type="image/x-icon">
+        
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- css file -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/portfolio.png" />
-  </head>
-  <body>
-    <!-- scroll bar  -->
-    <div id="scrollPath"></div>
-    <div id="progerssbar"></div>
-    <!-- end scroll bar  -->
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- header section starts  -->
+        <title>Portfolio | Aji Maulana</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="profile container">
+            <!-- Theme button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
 
-    <header>
-      <div class="user">
-        <img data-tilt src="img/profil.png" alt="profil" />
-        <h3 class="name">Aji Maulana</h3>
-        <p class="post">Web Developer</p>
-      </div>
+            <div class="profile__container grid">
+                <div class="profile__data">
+                    <div class="profile__border">
+                        <div class="profile__perfil">
+                            <!-- Insert your image, according to the example size of the portfolio -->
+                            <!-- <img src="assets/img/perfil.png" alt=""> -->
+                        </div>
+                    </div>
 
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href="#home"> <i class="fa fa-home"></i>home</a>
-          </li>
-          <li>
-            <a href="#about"><i class="fa fa-user"></i>about</a>
-          </li>
-          <li>
-            <a href="#education">
-              <i class="fas fa-graduation-cap"></i>education</a
-            >
-          </li>
-          <li>
-            <a href="#portfolio"><i class="fa fa-list"></i>my skilss</a>
-          </li>
-          <li>
-            <a href="#contact"> <i class="fa fa-comments"></i>contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+                    <h2 class="profile__name">Aji Maulana</h2>
+                    <h3 class="profile__profession">Backend developer</h3>
 
-    <!-- header section ends -->
+                    <ul class="profile__social">
+                        <a href="https://api.whatsapp.com/send?phone=081227156773&text=Hello, more information!" target="_blank" class="profile__social-link">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="profile__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="profile__social-link">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="profile__social-link">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
-    <div id="menu" class="fas fa-bars"></div>
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <section class="filters container">
+                <!--=============== FILTERS TABS ===============-->
+                <ul class="filters__content">
+                    <button class="filters__button filter-tab-active" data-target="#projects">
+                        Projects
+                    </button>
+                    <button class="filters__button" data-target="#skills">
+                        Skills
+                    </button>
+                </ul>
 
-    <!-- home section starts  -->
+                <div class="filters__sections">
+                    <!--=============== SKILLS ===============-->
+                    <div class="skills__content grid" data-content id="skills">
+                        <div class="skills__area">
+                            <h3 class="skills__title">Frontend Developer</h3>
+    
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">HTML</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">CSS</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">JavaScript</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Git</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <section class="home" id="home">
-      <h3>Hallo!</h3>
-      <h1>
-        Saya
-        <span>Aji Maulana</span>
-      </h1>
-      <p>
-        Nama saya Aji Maulana, Lahir pada tanggal 07 Agustus 2003, dan nama
-        panggilan saya adalah Aji. Saya memeiliki ketertarikan terhadap dunia
-        programming, selain itu saya telah telah membuat 1 API online shop.
-      </p>
-      <a href="#about"
-        ><button class="btn">about me <i class="fas fa-user"></i></button
-      ></a>
-    </section>
+                        <div class="skills__area">
+                            <h3 class="skills__title">Backend Developer</h3>
+    
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">PHP</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">MySQL</h3>
+                                            <span class="skills__level">Basic</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Node Js</h3>
+                                            <span class="skills__level">Intermediate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    <!-- home section ends -->
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!-- about section starts  -->
-
-    <section class="about" id="about">
-      <h1 class="heading"><span>about</span> me</h1>
-
-      <div class="row">
-        <div class="info">
-          <table>
-            <tr>
-              <td>
-                <h3><span> Nama</span></h3>
-              </td>
-              <td>
-                <h3>Aji Maulana</h3>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h3><span> Teampat, tanggal lahir</span></h3>
-              </td>
-              <td>
-                <h3>Surakarta, 07 Agustus 2003</h3>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h3><span> Jenis Kelamin</span></h3>
-              </td>
-              <td>
-                <h3>Laki - Laki</h3>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h3><span> Agama</span></h3>
-              </td>
-              <td>
-                <h3>Islam</h3>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <h3><span> Hobi</span></h3>
-              </td>
-              <td>
-                <h3>Ngoding, Baca Artikel, Nonton film</h3>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="counter">
-          <div class="box">
-            <span>1</span>
-            <h3>Online Shop API</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- about section ends -->
-
-    <!-- education section starts  -->
-
-    <section class="education" id="education">
-      <h1 class="heading">my <span>education</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2010 - 2016</span>
-          <h3>SD Negeri Kedunglumbu</h3>
-          <p>Menempuh pendidikan di SD Negeri Kedunglumbu selama 6 tahun.</p>
-        </div>
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2016 - 2019</span>
-          <h3>SMP Negeri 5 Surakarta</h3>
-          <p>Menempuh pendidikan di SMP Negeri 5 Surakarta selama 3 tahun.</p>
-        </div>
-
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2019 - 2022</span>
-          <h3>SMK Negeri 5 Surakarta</h3>
-          <p>Sedang menempuh pendidikan di SMK Negeri 5 Surakarta.</p>
-        </div>
-
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2021</span>
-          <h3>Javascript FreeCodeCamp</h3>
-          <p>
-            Sedang menempuh kursus gratis pada websaite
-            <a href="freecodecamp.org">freecodecamp.org</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- education section ends -->
-
-    <!-- portfolio section starts  -->
-
-    <section class="portfolio" id="portfolio">
-      <h1 class="heading">my <span>skills</span></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <img src="https://img.icons8.com/color/480/000000/javascript--v1.png" />
-        </div>
-
-        <div class="box">
-          <img src="https://img.icons8.com/dusk/480/000000/php-logo.png" />
-        </div>
-
-        <div class="box">
-          <img src="https://img.icons8.com/color/480/000000/java-coffee-cup-logo.png" />
-        </div>
-
-        <div class="box">
-          <img src="https://img.icons8.com/fluency/480/000000/node-js.png" />
-        </div>
-
-        <div class="box">
-          <img src="https://img.icons8.com/color/480/000000/mysql-logo.png" />
-        </div>
-
-        <div class="box">
-          <img src="https://img.icons8.com/color/480/000000/html-5--v1.png" />
-        </div>
-      </div>
-    </section>
-
-    <!-- portfolio section ends -->
-
-    <!-- contact section starts  -->
-
-    <section class="contact" id="contact">
-      <h1 class="heading"><span>contact</span> me</h1>
-
-      <div class="row">
-        <div class="content">
-          <h3 class="title">contact info</h3>
-
-          <div class="info">
-            <h3>
-              <a href="#"
-                ><i class="fab fa-whatsapp"></i>
-                +62 81227156773
-              </a>
-            </h3>
-            <h3>
-              <a href="#"
-                ><i class="fab fa-facebook"></i>
-                Aji Maulana
-              </a>
-            </h3>
-            <h3>
-              <a href="#"
-                ><i class="fab fa-instagram"></i>
-                ajimaulana_7
-              </a>
-            </h3>
-          </div>
-        </div>
-        <form action="">
-          <input type="text" placeholder="name" class="box" />
-          <input type="email" placeholder="email" class="box" />
-          <input type="text" placeholder="project" class="box" />
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            class="box message"
-            placeholder="message"
-          ></textarea>
-          <button type="submit" class="btn">
-            send <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </section>
-
-    <!-- contact section ends -->
-
-    <!-- scroll top button  -->
-
-    <a href="#home" class="top">
-      <img src="images/scroll-top-img.png" alt="" />
-    </a>
-
-    <!-- jquery cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <!-- custom js file link  -->
-    <script src="js/script.js"></script>
-  </body>
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
